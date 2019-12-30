@@ -105,10 +105,14 @@ function displaySermonModal(sermonObj) {
   document.getElementById("title").innerHTML = sermonObj.title;
 
   // Audio & Video
+  $("#audio-container").hide();
+  $("#video-container").hide();
   for (let i = 0; i < sermonObj.formats.length; i++) {
     if (sermonObj.formats[i].type == "Audio") {
+      $("#audio-container").show();
       document.getElementById("audio").src = sermonObj.formats[i].audio_url;
     } else if (sermonObj.formats[i].type == "Video") {
+      $("#video-container").show();
       document.getElementById("video").innerHTML = sermonObj.formats[i].video_code;
     }
   }
@@ -121,7 +125,7 @@ function displaySermonModal(sermonObj) {
 $("#search-btn").on("click", searchEventHandler);
 
 function searchEventHandler() {
-  // Display Initial Sermons from Church Social (All Ministers, Last 20 Sermons)
+  // Load Sermons from Church Social
   $.ajax({
     url: 'https://app.churchsocial.com/api/sermons',
     headers: {

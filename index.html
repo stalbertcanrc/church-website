@@ -107,7 +107,7 @@
               More...</a>
           </div>
           <div class="col-lg-6">
-            <img src="img/church-building.PNG" alt="" class="img-fluid">
+            <img src="img/church-building-700x407.jpg" alt="Church Building" class="img-fluid">
           </div>
         </div>
       </div>
@@ -187,7 +187,7 @@
         <div class="row pb-4">
           <div class="col-md-6 mb-4 px-lg-5">
             <div class="card border-secondary mx-auto mb-4">
-              <img src="img/dark-to-light-man.jpg" alt="Dark to Light" class="card-img-top">
+              <img src="img/dark-to-light-man-700x467.jpg" alt="Dark to Light Man" class="card-img-top">
               <div class="card-header">
                 <h4 class="px-lg-5">Ruin. Redemption. Restoration.</h4>
               </div>
@@ -205,7 +205,7 @@
           </div>
           <div class="col-md-6 px-lg-5">
             <div class="card border-secondary mx-auto mb-4">
-              <img src="img/growing-season.jpg" alt="Dark to Light" class="card-img-top">
+              <img src="img/growing-season-700x467.jpg" alt="Growing Season" class="card-img-top">
 
               <div class="card-header">
                 <h4>God Calls Us to a Life of True Worship</h4>
@@ -385,58 +385,9 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 
-  <script>
-    // Get the current year for the copyright
-    $('#year').text(new Date().getFullYear());
+  <script src="js/scrolling.js"></script>
+  <script src="js/main.js"></script>
 
-    // Get closed navbar height
-    const navHeight = $('#main-nav').height();
-
-    // Animate to section id if coming from another page
-    if (window.location.hash) {
-      setTimeout(function () {
-        $('html, body').animate({
-          scrollTop: $(window.location.hash).offset().top - navHeight
-        }, 600);
-      }, 100);
-    }
-
-    // Smooth Scrolling
-    $("#main-nav a, #call-to-action").on('click', function (event) {
-      if (this.hash != "") {
-        event.preventDefault();
-
-        const hash = this.hash;
-
-        $('.navbar-collapse').collapse('hide');
-
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top - navHeight
-        }, 800);
-      }
-    });
-
-    // Scroll Back to Top Arrow
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 100) {
-        $('#back-to-top').fadeIn();
-      } else {
-        $('#back-to-top').fadeOut();
-      }
-    });
-    // scroll body to 0px on click
-    $('#back-to-top').click(function () {
-      $('body,html').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
-    });
-
-    // Stop Sermon Audio on Modal Close
-    $(".modal").on("hidden.bs.modal", function (e) {
-      e.target.querySelector("audio").pause();
-    });
-  </script>
 </body>
 
 </html>

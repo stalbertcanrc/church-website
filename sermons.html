@@ -86,7 +86,7 @@
       <!-- SERMON SEARCH -->
       <div class="container">
         <div class="row pb-5">
-          <div class="col-lg-8">
+          <div class="col-lg-8 pb-2">
             <select id="minister-select" class="form-control">
               <option value="all-ministers">All Ministers</option>
             </select>
@@ -130,13 +130,19 @@
             </ul>
             <p id="title"></p>
 
-            <h6>Audio</h6>
-            <p>
-              <audio id="audio" class="form-control" src="" controls>
-              </audio>
-            </p>
-            <h6>Video</h6>
-            <p id="video" class="embed-responsive embed-responsive-4by3"></p>
+            <div id="audio-container">
+              <h6>Audio</h6>
+              <p>
+                <audio id="audio" class="form-control" src="" controls>
+                </audio>
+              </p>
+            </div>
+
+            <div id="video-container">
+              <h6>Video</h6>
+              <p id="video" class="embed-responsive embed-responsive-4by3"></p>
+            </div>
+
           </div>
 
           <!-- Modal footer -->

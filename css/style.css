@@ -71,10 +71,6 @@ nav {
   color: #dfcfa7;
 }
 
-.bg-light {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-}
-
 a.navbar-brand {
   line-height: 1;
 }
@@ -113,7 +109,7 @@ a.navbar-brand {
 
 /* HOME PAGE SHOWCASE */
 .showcase-light {
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url('../img/sanctuary.jpg') center top no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('../img/sanctuary-2500x1875.jpg') center top no-repeat fixed;
   background-size: cover;
   height: 100vh;
 }
