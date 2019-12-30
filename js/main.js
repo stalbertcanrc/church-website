@@ -18,7 +18,8 @@ $('#back-to-top').click(function () {
   return false;
 });
 
-// Stop Sermon Audio on Modal Close
-$(".modal").on("hidden.bs.modal", function (e) {
+// Stop Sermon Audio and Video on Modal Close
+$(".modal").on("hide.bs.modal", function (e) {
   e.target.querySelector("audio").pause();
+  $("iframe").attr("src", "");
 });

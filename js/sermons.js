@@ -68,6 +68,7 @@ function createSermonCard(sermonObj) {
 
 function loadSermonModal(e) {
   // Get sermon data from Church Social API
+  console.log(e.target.dataset.id);
   let sermonUrl = 'https://app.churchsocial.com/api/sermons/' + e.target.dataset.id;
   $.ajax({
     url: sermonUrl,

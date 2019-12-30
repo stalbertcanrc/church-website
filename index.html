@@ -196,7 +196,7 @@
                 <p class="card-text">John 3: 16</p>
                 <p class="card-test">Out of love, God gave His Son as the only hope for a world of death and ruin.</p>
                 <p class="card-text">
-                  <button class="btn btn-outline-dark" data-toggle="modal" data-target="#sermon-modal-1">
+                  <button class="btn btn-outline-dark" id="sermon-1">
                     <i class="fas fa-microphone fa-lg"></i> Listen...
                   </button>
                 </p>
@@ -216,12 +216,9 @@
                 <p class="card-test">God calls us to a life of true worship: a humble sacrifice of thanksgiving to God.
                 </p>
                 <p class="card-text">
-                  <button class="btn btn-outline-dark mr-3" data-toggle="modal" data-target="#sermon-modal-2">
-                    <i class="fas fa-microphone fa-lg"></i> Listen...
+                  <button class="btn btn-outline-dark mr-3" id="sermon-2">
+                    <i class="fas fa-microphone fa-lg" data-id="17437"></i> Listen...
                   </button>
-                  <a href="https://youtu.be/gkOCsxb3zI8" class="btn btn-outline-dark" target="_blank">
-                    <i class="fab fa-youtube fa-lg"></i> Watch...
-                  </a>
                 </p>
               </div>
             </div>
@@ -285,10 +282,6 @@
 
     </section>
 
-
-    <!-- CONTACT US -->
-
-
     <!-- FOOTER -->
     <footer id="page-footer" class="stone-wall text-white text-center">
       <p>
@@ -315,17 +308,25 @@
           <!-- Modal body -->
           <div class="modal-body">
             <h5>Rev. Ken Wieske</h5>
-            <p>John 3:16<br>Psalm 91; John 3:1-21</p>
+            <ul>
+              <li>John 3:16</li>
+              <li>Psalm 91</li>
+              <li>John 3:1-21</li>
+            </ul>
             <p>Out of love, God gave His Son as the only hope for a world of death and ruin.</p>
-            <ol>
-              <li>Ruin</li>
-              <li>Redemption</li>
-              <li>Restoration</li>
-            </ol>
 
-            <audio class="form-control"
-              src="media/Out-of-love-God-gave-His-Son-as-the-only-hope-for-a-world-of-death-and-ruin.mp3"
-              controls></audio>
+            <div id="audio-container-1">
+              <h6>Audio</h6>
+              <p>
+                <audio class="form-control" src="" controls>
+                </audio>
+              </p>
+            </div>
+
+            <div id="video-container-1">
+              <h6>Video</h6>
+              <p class="embed-responsive embed-responsive-4by3"></p>
+            </div>
           </div>
 
           <!-- Modal footer -->
@@ -351,11 +352,23 @@
           <!-- Modal body -->
           <div class="modal-body">
             <h5>Rev. Ken Wieske</h5>
-            <p>Psalm 50</p>
+            <ul>
+              <li>Psalm 50</li>
+            </ul>
             <p>God calls us to a life of true worship: a humble sacrifice of thanksiving.</p>
 
-            <audio class="form-control" src="media/God-Calls-Us-to-a-Life-of-True-Worship.mp3" controls>
-            </audio>
+            <div id="audio-container-2">
+              <h6>Audio</h6>
+              <p>
+                <audio class="form-control" src="media/God-Calls-Us-to-a-Life-of-True-Worship.mp3" controls>
+                </audio>
+              </p>
+            </div>
+
+            <div id="video-container-2">
+              <h6>Video</h6>
+              <p class="embed-responsive embed-responsive-4by3"></p>
+            </div>
           </div>
 
           <!-- Modal footer -->
@@ -387,6 +400,7 @@
 
   <script src="js/scrolling.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/sample-sermons.js"></script>
 
 </body>
 
