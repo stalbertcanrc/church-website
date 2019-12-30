@@ -1,0 +1,206 @@
+/* GENERAL */
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.25rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.stone-wall {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/stonewall.JPG') center;
+}
+
+/* BACK TO TOP ARROW */
+.back-to-top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 0.5rem 0;
+  bottom: 0.5rem;
+  left: 50%;
+  margin-left: -25px;
+  display: none;
+}
+
+#back-to-top.btn-light {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* NAVBAR */
+nav {
+  z-index: 1;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  font-weight: bold;
+  color: #dfcfa7;
+}
+
+.bg-light {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+a.navbar-brand {
+  line-height: 1;
+}
+
+.main-brand {
+  font-size: 1.75rem;
+  letter-spacing: 0.7rem;
+}
+
+.sub-brand {
+  font-size: 0.8rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+
+/* SERMONS Show Case */
+#sermons-showcase {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/stonewall.JPG');
+  color: white;
+  padding-top: 8.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+#sermons-showcase h1 {
+  letter-spacing: 0.5rem;
+}
+
+#sermons-column p {
+  font-size: 1rem;
+}
+
+#sermons-column p:first-of-type {
+  font-weight: 600;
+}
+
+/* HOME PAGE SHOWCASE */
+.showcase-light {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)), url('../img/sanctuary.jpg') center top no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+#showcase div {
+  overflow: auto;
+}
+
+#showcase h1.display-4 {
+  letter-spacing: 0.5rem;
+}
+
+#showcase h1.sub-heading {
+  letter-spacing: 0.25rem;
+  line-height: 1.5rem;
+}
+
+
+/* HOME PAGE CONTENT */
+#join-us,
+#contact-us {
+  background-color: #65686A;
+}
+
+#join-us h5 {
+  color: #dfcfa7;
+}
+
+#sermons-content .card-header {
+  background-color: #65686A;
+  color: #dfcfa7
+}
+
+#contact-us-content h4 {
+  color: #dfcfa7;
+}
+
+#page-footer {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 800px) {
+  #showcase h1.display-4 {
+    font-size: 2.5rem;
+  }
+
+  #showcase h1.sub-heading {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .embed-responsive {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-brand {
+    font-size: 1.35rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .sub-brand {
+    font-size: 0.6rem;
+    letter-spacing: 0.05rem;
+  }
+
+  #showcase h1.display-4 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  #showcase h1.sub-heading {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  #showcase p.lead {
+    font-size: 1rem;
+  }
+
+  #sermons-showcase h1 {
+    font-size: 2rem;
+  }
+
+}
