@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36025648-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-36025648-1');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -51,12 +63,6 @@
                 class="fas fa-unlock"></i></a>
           </li>
           <li class="nav-item">
-            <a href="https://play.google.com/music/m/Irettyw2ehx67ylgel3eazhykau?t=St_Albert_Canadian_Reformed_Church"
-              class="nav-link" target="_blank">SERMON PODCASTS
-              <i class="fas fa-podcast"></i>
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="sermons.html" class="nav-link">SERMON ARCHIVE <i class="fas fa-microphone"></i></a>
           </li>
         </ul>
@@ -85,15 +91,10 @@
 
       <!-- SERMON SEARCH -->
       <div class="container">
-        <div class="row pb-5">
-          <div class="col-lg-8 pb-2">
-            <select id="minister-select" class="form-control">
-              <option value="all-ministers">All Ministers</option>
-            </select>
-          </div>
-          <div class="col-lg-4">
-            <button id="search-btn" class="btn btn-danger btn-block" type="submit">Search</button>
-          </div>
+        <div class="pb-3">
+          <select id="minister-select" class="form-control form-control-lg bg-dark text-white">
+            <option value="all-ministers">All Ministers</option>
+          </select>
         </div>
       </div>
 

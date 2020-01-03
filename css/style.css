@@ -60,6 +60,7 @@ h6 {
 /* NAVBAR */
 nav {
   z-index: 1;
+  border-bottom: 1px solid #ccc;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -111,7 +112,7 @@ a.navbar-brand {
 .showcase-light {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('../img/sanctuary-2500x1875.jpg') center top no-repeat fixed;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #showcase div {
@@ -199,4 +200,16 @@ a.navbar-brand {
     font-size: 2rem;
   }
 
+}
+
+/* Landscape */
+@media all and (orientation:landscape) and (max-height: 600px) {
+  #showcase {
+    padding-top: 7.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 0.8rem;
+  }
 }

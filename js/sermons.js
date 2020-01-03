@@ -1,4 +1,7 @@
-// Display Initial Sermons from Church Social (All Ministers, Last 20 Sermons)
+// Global Variables
+let sermons;
+
+// Display Initial Sermons from Church Social on page load (All Ministers)
 $.ajax({
   url: 'https://app.churchsocial.com/api/sermons',
   headers: {
@@ -8,7 +11,7 @@ $.ajax({
 
 function displaySermons(sermonData) {
   // Get sermons and ministers in arrays
-  let sermons = sermonData.data;
+  sermons = sermonData.data;
   let ministers = sermonData.meta.authors;
 
   // Add ministers to select menu
@@ -68,7 +71,6 @@ function createSermonCard(sermonObj) {
 
 function loadSermonModal(e) {
   // Get sermon data from Church Social API
-  console.log(e.target.dataset.id);
   let sermonUrl = 'https://app.churchsocial.com/api/sermons/' + e.target.dataset.id;
   $.ajax({
     url: sermonUrl,
@@ -122,24 +124,12 @@ function displaySermonModal(sermonObj) {
   $("#sermon-modal").modal("show");
 }
 
-// Search Button
-$("#search-btn").on("click", searchEventHandler);
+// Minister Search
+$("#minister-select").on("change", searchEventHandler);
 
-function searchEventHandler() {
-  // Load Sermons from Church Social
-  $.ajax({
-    url: 'https://app.churchsocial.com/api/sermons',
-    headers: {
-      authorization: '0e3caa43db49cc8729a8bfa91f177bf6'
-    }
-  }).done(data => filterSermons(data));
-}
-
-function filterSermons(sermonData) {
-  let sermons = sermonData.data;
-
+function searchEventHandler(e) {
   // Get Form Input Value
-  let minister = $("#minister-select").val();
+  let minister = e.target.value;
 
   // Display sermons based on search values
   let $sermonsCol = $("#sermons-column");
